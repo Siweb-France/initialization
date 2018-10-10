@@ -39,5 +39,5 @@ targetPackages=( "${packages[@]}" "${packagesPhp[@]}")
 
 apt-get install -y "$targetPackages"
 
-configurePhp.sh "$phpVersion"
+installPhp.sh "$phpVersion"
 

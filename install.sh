@@ -16,4 +16,4 @@ main () {
 } 
 
 
-main 2>&1 /tmp/initialization.log
+main 2>&1 > /tmp/initialization.log
