@@ -5,7 +5,7 @@ set -xeuo pipefail
 packages=(
 cvs mailutils postfix
 htop iftop vim screen colordiff
-build-essential markdown firewall-applet pureftpd
+build-essential markdown firewall-applet pure-ftpd
 libaprutil1{,-dev} apache2
 silversearcher-ag augeas jq curl wget apt-utils
 )
