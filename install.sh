@@ -6,7 +6,7 @@ main () {
 
     apt-get update
     apt-get upgrade -y
-    apt-get install -y git
+    apt-get install -y git apt-utils
 
     gitRepo="/tmp/initialization"
     git clone https://github.com/Siweb-France/initialization.git $gitRepo
