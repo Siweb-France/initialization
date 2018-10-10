@@ -2,5 +2,5 @@
 
 directory="$(dirname $0)"
 
-crontab "$directory/default_crontab.txt"
+crontab "$directory/default_cron.txt"
 
