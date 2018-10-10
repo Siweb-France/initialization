@@ -9,11 +9,10 @@ main () {
     apt-get install -y git
 
     gitRepo="/tmp/initialization"
-    git clone git@github.com:Siweb-France/initialization.git $gitRepo
+    git clone https://github.com/Siweb-France/initialization.git $gitRepo
     export PATH="$PATH:$gitRepo"
 
-    installPackages.sh
-    installUser.sh
+    runInstall.sh
 } 
 
 
