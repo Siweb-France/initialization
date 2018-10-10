@@ -23,7 +23,7 @@ sed -i -e 's/#alias ll/alias ll/g;s/#alias la/alias la/g;s/#alias l=/alias l=/g'
 sed -i -e 's/# alias ls=/alias ls=/g' $home/.bashrc
 sed -i -e 's/# alias ll=/alias ll=/g' $home/.bashrc
 sed -i -e 's/# alias l=/alias l=/g' $home/.bashrc
-sed -i -e "s/#force_color_prompt=yes/force_color_prompt/g" $home/.bashrc
+sed -i -e "s/#force_color_prompt=yes/force_color_prompt=yes/g" $home/.bashrc
 
 chown it-siweb:www-data /var/www
 
