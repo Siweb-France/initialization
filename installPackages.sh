@@ -7,7 +7,7 @@ cvs mailutils postfix
 htop iftop vim screen colordiff
 build-essential markdown firewall-applet pureftpd
 libaprutil1{,-dev} apache2
-silversearcher-ag augeas jq curl wget
+silversearcher-ag augeas jq curl wget apt-utils
 )
 
 packagesPhp5=(
@@ -35,7 +35,7 @@ else
     phpVersion="php7"
 fi
 
-targetPackages=( "${packages[@]}" "${packagesPhp[@]}")
+targetPackages= "${packages[@]} ${packagesPhp[@]}"
 
 apt-get install -y "$targetPackages"
 
