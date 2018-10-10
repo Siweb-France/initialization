@@ -8,7 +8,7 @@ if test "$#" -lt 1; then
 fi
 
 phpVersion="$1"
-if test "$phpVersion" -eq "7.0"
+if test "$phpVersion" == "7.0"
 then
     phpIni="/etc/php/$phpVersion/apache2/php.ini"
     cliIni="/etc/php/$phpVersion/cli/php.ini"
