@@ -10,8 +10,8 @@ fi
 phpVersion="$1"
 if test "$phpVersion" == "7.0"
 then
-    phpIni="/etc/php/$phpVersion/apache2/php.ini"
-    cliIni="/etc/php/$phpVersion/cli/php.ini"
+    phpIni="/etc/php/7.0/apache2/php.ini"
+    cliIni="/etc/php/7.0/cli/php.ini"
 else
     phpIni="/etc/$phpVersion/apache2/php.ini"
     cliIni="/etc/$phpVersion/cli/php.ini"
