@@ -3,7 +3,7 @@
 set -xeuo pipefail
 
 packages=(
-cvs mailutils postfix
+cvs mailutils
 htop iftop vim screen colordiff
 build-essential markdown firewall-applet pure-ftpd
 libaprutil1{,-dev} apache2
