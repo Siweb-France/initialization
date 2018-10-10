@@ -8,4 +8,4 @@ a2enmod headers
 sed -i -e "s/\/var\/www\/html/\/var\/www/g" /etc/apache2/sites-enabled/000-default.conf
 sed -i -e "s/Options Indexes FollowSymLinks/Options -Indexes -FollowSymLinks/g" /etc/apache2/apache2.conf
 
-
+service restart apache2
