@@ -7,7 +7,7 @@ cvs mailutils
 htop iftop vim screen colordiff
 build-essential markdown firewall-applet pure-ftpd
 libaprutil1{,-dev} apache2
-silversearcher-ag jq curl wget 
+silversearcher-ag jq curl wget ntpdate nano
 )
 
 packagesPhp5=(
