@@ -4,10 +4,10 @@ PASSWORD=""
 0 0 * * * /var/scripts/clean.pl
 0 1 * * * /usr/bin/php -f /var/scripts/backup_bdd.php
 0 2 * * * /var/scripts/backup_files.pl
-*/10 * * * * /var/scripts/disk.sh xxxxxx /usr 90 admin@siweb.fr
-*/10 * * * * /var/scripts/disk.sh xxxxxx /var 90 admin@siweb.fr
-*/10 * * * * /var/scripts/disk.sh xxxxxx /tmp 90 admin@siweb.fr
-*/10 * * * * /var/scripts/disk.sh xxxxxx /home 90 admin@siweb.fr
+*/10 * * * * /var/scripts/disk.sh $HOSTNAME /usr 90 admin@siweb.fr
+*/10 * * * * /var/scripts/disk.sh $HOSTNAME /var 90 admin@siweb.fr
+*/10 * * * * /var/scripts/disk.sh $HOSTNAME /tmp 90 admin@siweb.fr
+*/10 * * * * /var/scripts/disk.sh $HOSTNAME /home 90 admin@siweb.fr
 0 22 * * * /usr/bin/mysql -h localhost -u root --password="$PASSWORD" -e 'FLUSH HOSTS'
 30 23 * * * find /var/www/*/log.txt_* -mtime +10 -exec rm -f {} \;
 35 23 * * * find /var/www/*/documents/*/printwait/*.pdf -mtime +2 -exec rm -f {} \;
