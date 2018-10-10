@@ -37,7 +37,7 @@ fi
 
 targetPackages="${packages[@]} ${packagesPhp[@]}"
 
-apt-get install -y "$targetPackages"
+apt-get install -y $targetPackages
 
 installPhp.sh "$phpVersion"
 
