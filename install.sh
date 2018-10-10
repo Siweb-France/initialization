@@ -1,23 +1,16 @@
 #!/bin/bash
 
-set -euo pipefail
+set -xeuo pipefail
 
-apt-get update
-apt-get upgrade -y
-apt-get install git
+{
 
-gitRepo="/tmp/initialization"
-git clone git@github.com:Siweb-France/initialization.git $gitRepo
-PATH="$PATH:$gitRepo"
+    apt-get update
+    apt-get upgrade -y
+    apt-get install -y git
 
-cleanup(){
-    rm -rf $gitRepo
-}
+    gitRepo="/tmp/initialization"
+    git clone git@github.com:Siweb-France/initialization.git $gitRepo
+    PATH="$PATH:$gitRepo"
 
-trap cleanup EXIT;
-
-installPackages.sh
-
-mv /etc/mysql/my.cnf{,.origine}
-
-
+    installPackages.sh
+} > /tmp/initialization.log 2>/tmp/initialization_error.log

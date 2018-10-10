@@ -6,7 +6,7 @@ packages=(
 cvs mailutils postfix
 htop iftop vim screen colordiff
 build-essential markdown firewall-applet pureftpd
-libaprutil1{,-dev} apache2 mysql-server
+libaprutil1{,-dev} apache2
 silversearcher-ag augeas jq curl wget
 )
 
@@ -39,7 +39,6 @@ targetPackages=( "${packages[@]}" "${packagesPhp[@]}")
 
 apt-get install -y "$targetPackages"
 
-
 configurePhp.sh "$phpVersion"
-installFirewalld.sh
-installDb.sh
+
+
