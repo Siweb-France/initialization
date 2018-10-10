@@ -7,7 +7,7 @@ cvs mailutils
 htop iftop vim screen colordiff
 build-essential markdown firewall-applet pure-ftpd
 libaprutil1{,-dev} apache2
-silversearcher-ag augeas-tools jq curl wget apt-utils
+silversearcher-ag jq curl wget apt-utils
 )
 
 packagesPhp5=(
