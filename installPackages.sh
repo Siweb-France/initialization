@@ -35,7 +35,7 @@ else
     phpVersion="php7"
 fi
 
-targetPackages= "${packages[@]} ${packagesPhp[@]}"
+targetPackages="${packages[@]} ${packagesPhp[@]}"
 
 apt-get install -y "$targetPackages"
 
