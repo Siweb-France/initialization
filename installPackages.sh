@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -xeuo pipefail
 
 packages=(
 cvs mailutils postfix
@@ -40,5 +40,4 @@ targetPackages=( "${packages[@]}" "${packagesPhp[@]}")
 apt-get install -y "$targetPackages"
 
 configurePhp.sh "$phpVersion"
-
 

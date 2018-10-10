@@ -13,6 +13,7 @@ main () {
     export PATH="$PATH:$gitRepo"
 
     installPackages.sh
+    installUser.sh
 } 
 
 
