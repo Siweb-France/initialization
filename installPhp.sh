@@ -8,9 +8,14 @@ if test "$#" -lt 1; then
 fi
 
 phpVersion="$1"
-
-phpIni="/etc/$phpVersion/apache2/php.ini"
-cliIni="/etc/$phpVersion/cli/php.ini"
+if test "$phpVersion" -eq "7.0"
+then
+    phpIni="/etc/php/$phpVersion/apache2/php.ini"
+    cliIni="/etc/php/$phpVersion/cli/php.ini"
+else
+    phpIni="/etc/$phpVersion/apache2/php.ini"
+    cliIni="/etc/$phpVersion/cli/php.ini"
+fi
 
 replacements=();
 replacements+=("s/short_open_tag = Off/short_open_tag = On/g")
