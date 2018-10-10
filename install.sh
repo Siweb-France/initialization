@@ -19,5 +19,5 @@ main () {
 main 2>&1 | tee /tmp/initialization.log
 
 
-# apt-get update && apt-get upgrade -y && apt-get install curl && curl https://raw.githubusercontent.com/Siweb-France/initialization/master/install.sh | bash
+# apt-get update && apt-get upgrade -y && apt-get install curl -y && curl https://raw.githubusercontent.com/Siweb-France/initialization/master/install.sh | bash
 
