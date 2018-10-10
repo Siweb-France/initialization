@@ -2,7 +2,7 @@
 
 set -xeuo pipefail
 
-{
+main () {
 
     apt-get update
     apt-get upgrade -y
@@ -10,7 +10,10 @@ set -xeuo pipefail
 
     gitRepo="/tmp/initialization"
     git clone git@github.com:Siweb-France/initialization.git $gitRepo
-    PATH="$PATH:$gitRepo"
+    export PATH="$PATH:$gitRepo"
 
     installPackages.sh
-} > /tmp/initialization.log 2>/tmp/initialization_error.log
+} 
+
+
+main 2>&1 /tmp/initialization.log

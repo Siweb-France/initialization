@@ -1,6 +1,6 @@
 #!/bin/bash
 defaultUser="it-siweb"
-useradd -m "$defaultUser"
+useradd -m "$defaultUser" -s /bin/bash -p '*'
 sshLocal="/home/$defaultUser/.ssh"
 mkdir "$sshLocal"
 chmod 0700 "$sshLocal"
