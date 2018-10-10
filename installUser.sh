@@ -1,6 +1,11 @@
 #!/bin/bash
+
+set -euxo pipefail
+
 defaultUser="it-siweb"
-adduser "$defaultUser" --shell /bin/bash -p '*' -gecos
+
+useradd -m "$defaultUser" -s /bin/bash -p '*'
+
 sshLocal="/home/$defaultUser/.ssh"
 mkdir "$sshLocal"
 chmod 0700 "$sshLocal"
