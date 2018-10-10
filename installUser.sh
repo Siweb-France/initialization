@@ -1,6 +1,6 @@
 #!/bin/bash
 defaultUser="it-siweb"
-adduser -m "$defaultUser" -s /bin/bash -p '*' -gecos
+adduser "$defaultUser" --shell /bin/bash -p '*' -gecos
 sshLocal="/home/$defaultUser/.ssh"
 mkdir "$sshLocal"
 chmod 0700 "$sshLocal"
