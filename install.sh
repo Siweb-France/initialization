@@ -8,9 +8,10 @@ main () {
     apt-get upgrade -y
     apt-get install -y git apt-utils
 
-    gitRepo="/tmp/initialization"
-    git clone https://github.com/Siweb-France/initialization.git $gitRepo
-    export PATH="$PATH:$gitRepo"
+    cd /usr/local/bin
+    git clone https://github.com/Siweb-France/initialization.git
+    git clone https://github.com/Siweb-France/migration.git
+    export PATH="$PATH:/usr/local/bin/initialization"
 
     runInstall.sh
 } 
