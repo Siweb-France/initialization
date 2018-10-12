@@ -34,3 +34,4 @@ done
 echo "Restarting service"
 
 service mysql restart
+systemctl enable mysql
