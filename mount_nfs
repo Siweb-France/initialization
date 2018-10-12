@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if test "$#" -lt 3;
+then
+    >&2 echo "Usage: mount_point local_app_name backup_service_name"
+    exit 1;
+fi
+
+mp="$1"
+lan="$2"
+bsn="$3"
+
+sudo mkdir -p "$mp"
+sudo echo "$bsn:/export/ftpbackup/$lan $mp nfs rw,async,hard,intr,noexec 0 0" >> /etc/fstab
+sudo mnt "$mp"
