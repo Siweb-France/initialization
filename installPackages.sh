@@ -5,10 +5,19 @@ set -xeuo pipefail
 packages=(
 cvs mailutils
 htop iftop vim screen colordiff
-build-essential markdown firewall-applet pure-ftpd
+build-essential markdown pure-ftpd
 libaprutil1{,-dev} apache2 mlocate ssh
-silversearcher-ag jq curl wget ntpdate nano
+silversearcher-ag jq curl wget ntpdate nano expect
 )
+
+if [[ "--firewalld" == *"$*"*  ]];then
+    packages+=("firewall-applet")
+fi
+
+if [[ "--ssmtp" == *"$*"*  ]];then
+    packages+=("ssmtm")
+fi
+
 
 packagesPhp5=(
 php5 libapache2-mod-php5
