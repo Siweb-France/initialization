@@ -7,7 +7,8 @@ cvs mailutils
 htop iftop vim screen colordiff
 build-essential markdown pure-ftpd
 libaprutil1{,-dev} apache2 mlocate ssh
-silversearcher-ag jq curl wget ntpdate nano expect
+silversearcher-ag jq curl wget ntpdate nano expect nfs-common
+apache2.2-common libc6 libgcc1 libstdc++6
 )
 
 if [[ "--firewalld" == *"$*"*  ]];then
