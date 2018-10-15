@@ -11,6 +11,7 @@ main () {
     cd /usr/local/bin
     git clone https://github.com/Siweb-France/initialization.git
     git clone https://github.com/Siweb-France/migration.git
+    git clone https://github.com/Siweb-France/maintain.git
     export PATH="$PATH:/usr/local/bin/initialization"
 
     runInstall.sh
