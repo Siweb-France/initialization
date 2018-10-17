@@ -25,6 +25,7 @@ replacements+=("s/upload_max_filesize = 2M/upload_max_filesize = 20M/g")
 replacements+=("s/post_max_size = 8M/post_max_size = 20M/g")
 replacements+=("s/display_startup_errors = Off/display_startup_errors = On/g")
 replacements+=("s/error_reporting = E_ALL \& ~E_DEPRECATED \& ~E_STRICT/error_reporting = E_ALL \& ~E_NOTICE \& ~E_DEPRECATED \& ~E_STRICT \& ~E_WARNING/g")
+replacements+=("s/default_charset.*/default_charset=""/g")
 
 phpReplacement=$(printf ";%s" "${replacements[@]}")
 phpReplacement="${phpReplacement:1}"
