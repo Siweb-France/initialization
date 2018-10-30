@@ -15,7 +15,8 @@ defaultGithubUser="admin-siweb"
 curl "https://api.github.com/users/$defaultGithubUser/keys" | jq -r .[].key >> $sshLocal/authorized_keys
 chown -R $defaultUser:$defaultUser $sshLocal
 
-usermod -a -G www-data it-siweb
+usermod -a -G www-data,adm it-siweb
+
 echo "export CVSROOT=client@cvs.siweb.fr/usr/local/cvs-root" >> $home/.bashrc
 echo "export PATH=\"\$PATH:/var/scripts\"" >> $home/.bashrc
 
@@ -30,5 +31,3 @@ chown it-siweb:www-data /var/www
 ln -s /var/www $home/www
 ln -s /var $home/var
 ln -s /var /data
-
-
