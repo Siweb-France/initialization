@@ -8,7 +8,7 @@ htop iftop vim screen colordiff
 build-essential markdown pure-ftpd
 libaprutil1{,-dev} apache2 mlocate ssh
 silversearcher-ag jq curl wget ntpdate nano expect nfs-common
-apache2.2-common libc6 libgcc1 libstdc++6
+ libc6 libgcc1 libstdc++6
 )
 
 if [[ "--firewalld" == *"$*"*  ]];then
@@ -35,17 +35,19 @@ php7.0-xml php7.0-xmlrpc
 php7.0-mbstring php7.0-apcu php7.0-ssh2 php7.0-xdebug
 )
 
+additionnals=()
 
 if dpkg --compare-versions "$(cat /etc/debian_version)" "lt" "9.0"
 then
     packagesPhp=("${packagesPhp5[@]}")
     phpVersion="php5"
+    additionnals+=("apache2.2-common")
 else
     packagesPhp=("${packagesPhp7[@]}")
     phpVersion="php7.0"
 fi
 
-targetPackages="${packages[@]} ${packagesPhp[@]}"
+targetPackages="${packages[@]} ${packagesPhp[@]} ${additionnals[@]}"
 
 apt-get install -y $targetPackages
 
