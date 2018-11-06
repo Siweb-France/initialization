@@ -16,7 +16,7 @@ if [[ "--firewalld" == *"$*"*  ]];then
 fi
 
 if [[ "--ssmtp" == *"$*"*  ]];then
-    packages+=("ssmtm")
+    packages+=("ssmtp")
 fi
 
 
