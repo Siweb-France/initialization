@@ -4,6 +4,7 @@
 sed -i -e "s/\/var\/www\/html/\/var\/www/g" /etc/apache2/sites-enabled/000-default.conf
 sed -i -e "s/Options Indexes FollowSymLinks/Options -Indexes -FollowSymLinks/g" /etc/apache2/apache2.conf
 
+ARCH="$(dpkg --print-architecture)"
 
 wget "https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_${ARCH}.deb" \
   --output-document="/tmp/mod-pagespeed-stable_current_${ARCH}.deb"
