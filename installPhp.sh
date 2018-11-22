@@ -30,4 +30,7 @@ replacements+=("s/default_charset.*/default_charset=""/g")
 phpReplacement=$(printf ";%s" "${replacements[@]}")
 phpReplacement="${phpReplacement:1}"
 
+#disable xdebug by default
+find /etc/php* -name "*xdebug.ini" -type f -exec sed -ri 's/^;?(.*xdebug\.so)$/;\1/' {} \;
+
 sed -Ei "$phpReplacement" "$phpIni"
