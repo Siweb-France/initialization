@@ -15,11 +15,6 @@ if [[ "--firewalld" == *"$*"*  ]];then
     packages+=("firewall-applet")
 fi
 
-if [[ "--ssmtp" == *"$*"*  ]];then
-    packages+=("ssmtp")
-fi
-
-
 packagesPhp5=(
 php5 libapache2-mod-php5
 php5-curl php5-mcrypt 
