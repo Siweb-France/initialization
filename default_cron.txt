@@ -1,6 +1,5 @@
 MAILTO=''
 PASSWORD=""
-CRON="RUNNING"
 0 3 * * * /usr/sbin/ntpdate pool.ntp.org
 0 0 * * * /usr/local/bin/maintain/clean.pl
 0 1 * * * /usr/local/bin/maintain/backup_bdd.php "$PASSWORD"
